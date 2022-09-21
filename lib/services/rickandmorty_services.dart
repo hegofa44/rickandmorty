@@ -9,7 +9,6 @@ class RickAndMortyServices extends ChangeNotifier {
   String _baseUrl = 'rickandmortyapi.com';
   List<CharactersPersonajes> personajes = [];
   List<CharactersPersonajes> allCharacters = [];
-  List<EpisodesModels> episodes = [];
 
   int _numberPage = 0;
 

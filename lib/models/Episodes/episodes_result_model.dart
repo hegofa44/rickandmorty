@@ -1,12 +1,8 @@
-// To parse this JSON data, do
-//
-//     final episodesModels = episodesModelsFromMap(jsonString);
-
 import 'dart:convert';
 
-class EpisodesModels {
-  EpisodesModels({
-    this.id,
+class EpisodesResult {
+  EpisodesResult({
+    required this.id,
     required this.name,
     required this.airDate,
     required this.episode,
@@ -15,7 +11,7 @@ class EpisodesModels {
     required this.created,
   });
 
-  int? id;
+  int id;
   String name;
   String airDate;
   String episode;
@@ -23,13 +19,13 @@ class EpisodesModels {
   String url;
   DateTime created;
 
-  factory EpisodesModels.fromJson(String str) =>
-      EpisodesModels.fromMap(json.decode(str));
+  factory EpisodesResult.fromJson(String str) =>
+      EpisodesResult.fromMap(json.decode(str));
 
   String toJson() => json.encode(toMap());
 
-  factory EpisodesModels.fromMap(Map<String, dynamic> json) => EpisodesModels(
-        // id: json["id"],
+  factory EpisodesResult.fromMap(Map<String, dynamic> json) => EpisodesResult(
+        id: json["id"],
         name: json["name"],
         airDate: json["air_date"],
         episode: json["episode"],
@@ -39,7 +35,7 @@ class EpisodesModels {
       );
 
   Map<String, dynamic> toMap() => {
-        // "id": id,
+        "id": id,
         "name": name,
         "air_date": airDate,
         "episode": episode,

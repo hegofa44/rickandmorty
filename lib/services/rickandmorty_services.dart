@@ -42,25 +42,4 @@ class RickAndMortyServices extends ChangeNotifier {
     allCharacters = [...allCharacters, ...characterResponse.results];
     notifyListeners();
   }
-
-  // Future<List<CharacterModels>> loadProducts() async {
-
-  //   notifyListeners();
-
-  //   final url = Uri.https(_baseUrl, 'Zapatos.json');
-  //   final resp = await http.get(url);
-  //   if (json.decode(resp.body) == null) return [];
-  //   final Map<String, dynamic> productsMap = json.decode(resp.body);
-
-  //   productsMap.forEach((key, value) {
-  //     final tempProduct = CharacterModels.fromMap(value);
-  //     tempProduct.id = key;
-
-  //     this.products.add(tempProduct);
-  //   });
-
-  //   notifyListeners();
-
-  //   return this.products;
-  // }
 }

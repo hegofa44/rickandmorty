@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:prueba_incubapp/providers/providers.dart';
 import 'package:prueba_incubapp/screens/screens.dart';
 import 'package:prueba_incubapp/services/services.dart';
 
@@ -13,6 +14,10 @@ class AppState extends StatelessWidget {
         ChangeNotifierProvider(
           create: (_) => RickAndMortyServices(),
           lazy: false,
+        ),
+        ChangeNotifierProvider(
+          create: (_) => SelectedScreenProvider(),
+          // lazy: false,
         )
       ],
       child: MyApp(),
@@ -26,10 +31,13 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Rick and Morty',
-      initialRoute: 'homeScreen',
+      initialRoute: 'homeScreen2',
       routes: {
         'homeScreen': (_) => HomeScreen(),
+        'homeScreen2': (_) => HomeScreen2(),
         'episodeScreen': (_) => EpisodeScreen(),
+        'episodeScreen2': (_) => EpisodeScreen2(),
+        'locationScreen': (_) => LocationScreen(),
       },
       theme: ThemeData.light(),
     );

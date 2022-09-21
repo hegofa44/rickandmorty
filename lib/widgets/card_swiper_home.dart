@@ -12,7 +12,7 @@ class CardSwiperHome extends StatelessWidget {
     if (this.characters.length == 0) {
       return Container(
         width: double.infinity,
-        height: size.height * 0.5,
+        height: size.height * 0.45,
         child: Center(
           child: CircularProgressIndicator(),
         ),
@@ -20,12 +20,12 @@ class CardSwiperHome extends StatelessWidget {
     }
     return Container(
       width: double.infinity,
-      height: size.height * 0.5,
+      height: size.height * 0.45,
       // color: Colors.red,
       child: Swiper(
         layout: SwiperLayout.STACK,
         itemWidth: size.width * 0.6,
-        itemHeight: size.height * 0.45,
+        itemHeight: size.height * 0.4,
         itemCount: characters.length,
         itemBuilder: (_, int index) {
           final _personajes = characters[index];

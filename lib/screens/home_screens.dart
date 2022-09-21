@@ -8,30 +8,21 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final rickandmortyService = Provider.of<RickAndMortyServices>(context);
     return Scaffold(
-        appBar: AppBar(
-          title: Text('Rick and Morty'),
-          actions: [
-            IconButton(
-              icon: Icon(Icons.search),
-              onPressed: () {},
-            )
-          ],
-        ),
         body: SingleChildScrollView(
-          child: Column(
-            children: [
-              // Ver listado capitulos
-              CardSwiperHome(characters: rickandmortyService.personajes),
-              //Listado horizontal capitulos
+      child: Column(
+        children: [
+          // Ver listado capitulos
+          CardSwiperHome(characters: rickandmortyService.personajes),
+          //Listado horizontal capitulos
 
-              SliderEpisode(
-                characters: rickandmortyService.allCharacters,
-                title: 'Personajes',
-                paginaSiguiente: () => rickandmortyService.getAllCharacters(),
-              ),
-              // SliderEpisode(),
-            ],
+          SliderEpisode(
+            characters: rickandmortyService.allCharacters,
+            title: 'Personajes',
+            paginaSiguiente: () => rickandmortyService.getAllCharacters(),
           ),
-        ));
+          // SliderEpisode(),
+        ],
+      ),
+    ));
   }
 }

@@ -23,15 +23,6 @@ class _HomeScreenState extends State<HomeScreen2> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Rick and Morty'),
-        actions: [
-          IconButton(
-            icon: Icon(Icons.search),
-            onPressed: () {},
-          )
-        ],
-      ),
       bottomNavigationBar: CustomNavigationBar(),
       body: _PaginaSeleccionada(),
     );

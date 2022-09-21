@@ -90,11 +90,29 @@ class _EpisodioTitulo extends StatelessWidget {
                   // maxLines: 2,
                 ),
               ),
-              Text(
-                'Status: ' + cheracterPerson.status,
-                style: Theme.of(context).textTheme.subtitle1,
-                overflow: TextOverflow.ellipsis,
-                maxLines: 2,
+              Row(
+                children: [
+                  Text(
+                    'Status:',
+                    style: Theme.of(context).textTheme.subtitle1,
+                    overflow: TextOverflow.ellipsis,
+                    maxLines: 2,
+                  ),
+                  SizedBox(
+                    width: 5,
+                  ),
+                  Text(
+                    cheracterPerson.status,
+                    style: TextStyle(
+                        color: cheracterPerson.status == 'Dead'
+                            ? Colors.red
+                            : cheracterPerson.status == 'Alive'
+                                ? Colors.lightGreenAccent
+                                : Colors.white),
+                    overflow: TextOverflow.ellipsis,
+                    maxLines: 2,
+                  ),
+                ],
               ),
               Text(
                 'Gender: ' + cheracterPerson.gender,
@@ -170,10 +188,10 @@ class _EpisodioResumen extends StatelessWidget {
                   children: [
                     Container(
                       decoration: BoxDecoration(
-                          color: Colors.grey.shade100,
+                          // color: Colors.grey.shade100,
                           border: Border.all(
                               // borderRadius: BorderRadius.circular(10.0),
-                              color: Colors.black,
+                              color: Colors.lime,
                               width: 1.0),
                           borderRadius: BorderRadius.circular(8.0)),
                       // height: 80,
@@ -189,23 +207,14 @@ class _EpisodioResumen extends StatelessWidget {
                                         "https://rickandmortyapi.com/api/episode/",
                                         ""),
                                     textAlign: TextAlign.justify,
-                                    style: TextStyle(
-                                        color: Colors.black, fontSize: 13),
+                                    style: TextStyle(fontSize: 13),
                                   ))
                         ],
                       ),
-                      // color: Colors.grey,
-                      // decoration: _cardColorsDecorations(),
                     ),
-                    // Icon(FontAwesomeIcons.slash),
                   ],
                 ),
               );
-              // return Text(
-              //   cheracterPerson.episode[index]
-              //       .replaceAll("https://rickandmortyapi.com/api/episode/", ""),
-              //   textAlign: TextAlign.justify,
-              // );
             },
           ),
         ),

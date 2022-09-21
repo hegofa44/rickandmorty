@@ -10,7 +10,7 @@ class Info {
 
   int count;
   int pages;
-  String next;
+  dynamic next;
   dynamic prev;
 
   factory Info.fromJson(String str) => Info.fromMap(json.decode(str));

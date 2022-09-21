@@ -9,3 +9,5 @@ export 'package:prueba_incubapp/models/Location/location_result_model.dart';
 export 'package:prueba_incubapp/models/Episodes/episodes_models.dart';
 
 export 'package:prueba_incubapp/models/Episodes/episodes_result_model.dart';
+
+export 'package:prueba_incubapp/models/Location/location.dart';

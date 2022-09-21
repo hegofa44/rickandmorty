@@ -35,30 +35,30 @@ class _CustomNavigationBarState extends State<CustomNavigationBar> {
             children: [
               GestureDetector(
                 child: _CustomIconBar(
-                  icon: Icons.home,
+                  icon: Icons.supervised_user_circle_rounded,
                   iconText: 'Characters',
                   iconColor: (selectedScreenProvider.opcionSeleccionada == 0)
-                      ? Colors.black
-                      : Colors.grey,
+                      ? Colors.cyanAccent
+                      : Colors.white,
                   textColor: (selectedScreenProvider.opcionSeleccionada == 0)
-                      ? Colors.black
-                      : Colors.grey,
+                      ? Colors.cyanAccent
+                      : Colors.white,
                 ),
                 onTap: () {
                   selectedScreenProvider.opcionSeleccionada = 0;
-                  selectedScreenProvider.opcionSeleccionada2 = 0.01;
+                  selectedScreenProvider.opcionSeleccionada2 = 0.0;
                 },
               ),
               GestureDetector(
                 child: _CustomIconBar(
-                  icon: Icons.people_alt,
+                  icon: Icons.map_outlined,
                   iconText: 'Location',
                   iconColor: (selectedScreenProvider.opcionSeleccionada == 1)
-                      ? Colors.black
-                      : Colors.grey,
+                      ? Colors.cyanAccent
+                      : Colors.white,
                   textColor: (selectedScreenProvider.opcionSeleccionada == 1)
-                      ? Colors.black
-                      : Colors.grey,
+                      ? Colors.cyanAccent
+                      : Colors.white,
                 ),
                 onTap: () {
                   selectedScreenProvider.opcionSeleccionada = 1;
@@ -67,14 +67,14 @@ class _CustomNavigationBarState extends State<CustomNavigationBar> {
               ),
               GestureDetector(
                 child: _CustomIconBar(
-                  icon: Icons.add_box,
+                  icon: Icons.queue_play_next_rounded,
                   iconText: 'Episode',
                   iconColor: (selectedScreenProvider.opcionSeleccionada == 2)
-                      ? Colors.black
-                      : Colors.grey,
+                      ? Colors.cyanAccent
+                      : Colors.white,
                   textColor: (selectedScreenProvider.opcionSeleccionada == 2)
-                      ? Colors.black
-                      : Colors.grey,
+                      ? Colors.cyanAccent
+                      : Colors.white,
                 ),
                 onTap: () {
                   selectedScreenProvider.opcionSeleccionada = 2;
@@ -89,7 +89,7 @@ class _CustomNavigationBarState extends State<CustomNavigationBar> {
             left: size.width * selectedScreenProvider.opcionSeleccionada2,
             child: Container(
               alignment: Alignment.center,
-              color: Colors.black,
+              color: Colors.cyanAccent,
               height: 2,
               width: size.width / 3,
             ),
@@ -99,7 +99,7 @@ class _CustomNavigationBarState extends State<CustomNavigationBar> {
   }
 
   BoxDecoration _buildBoxDecoration() => BoxDecoration(
-        color: Colors.white,
+        color: Colors.grey[800],
         boxShadow: [
           BoxShadow(
             color: Colors.black.withOpacity(0.5),

@@ -38,8 +38,10 @@ class MyApp extends StatelessWidget {
         'episodeScreen': (_) => EpisodeScreen(),
         'episodeScreen2': (_) => EpisodeScreen2(),
         'locationScreen': (_) => LocationScreen(),
+        'detalleLocationScreen': (_) => DetalleLocationScreen(),
+        'detalleEpisodioScreen': (_) => DetalleEpisodioScreen(),
       },
-      theme: ThemeData.light(),
+      theme: ThemeData.dark(),
     );
   }
 }

@@ -1,9 +1,4 @@
-// To parse this JSON data, do
-//
-//     final characterModels = characterModelsFromMap(jsonString);
-
 import 'dart:convert';
-
 import 'package:prueba_incubapp/models/models.dart';
 
 class CharacterModels {
